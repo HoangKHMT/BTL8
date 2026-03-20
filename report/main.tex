@@ -1,0 +1,141 @@
+\section{Giới thiệu}
+
+Trong bối cảnh hiện nay, gian lận tài chính, đặc biệt là gian lận thẻ tín dụng, đang trở thành một vấn đề nghiêm trọng đối với các tổ chức tài chính. Các hành vi gian lận có thể gây ra tổn thất lớn về kinh tế và ảnh hưởng đến uy tín của doanh nghiệp.
+
+Khai phá dữ liệu (Data Mining) và học máy (Machine Learning) đã được ứng dụng rộng rãi nhằm phát hiện các giao dịch bất thường và ngăn chặn gian lận. Các phương pháp này giúp trích xuất tri thức từ dữ liệu lớn, từ đó phát hiện các mẫu hành vi bất thường.
+
+Theo các nghiên cứu, phát hiện gian lận là quá trình xác định các hành vi bất thường hoặc sai lệch so với hành vi bình thường trong dữ liệu giao dịch :contentReference[oaicite:0]{index=0}. Điều này giúp phát hiện sớm các giao dịch đáng ngờ và giảm thiểu rủi ro tài chính.
+
+Mục tiêu của đề tài là xây dựng một hệ thống phát hiện gian lận thẻ tín dụng dựa trên các kỹ thuật khai phá dữ liệu và học máy.
+\section{Cơ sở lý thuyết}
+
+\subsection{Khai phá dữ liệu}
+Khai phá dữ liệu là quá trình trích xuất thông tin hữu ích từ tập dữ liệu lớn thông qua các phương pháp thống kê và học máy. Các kỹ thuật phổ biến bao gồm phân loại, phân cụm, và phát hiện bất thường.
+
+\subsection{Phát hiện gian lận}
+Phát hiện gian lận là quá trình xác định các giao dịch bất thường trong dữ liệu. Các hệ thống phát hiện gian lận thường dựa trên hai hướng chính:
+\begin{itemize}
+    \item Phát hiện dựa trên luật (rule-based)
+    \item Phát hiện dựa trên học máy
+\end{itemize}
+
+Các thuật toán phổ biến:
+\begin{itemize}
+    \item Logistic Regression
+    \item Decision Tree
+    \item Random Forest
+    \item Support Vector Machine (SVM)
+\end{itemize}
+
+Theo nghiên cứu, các thuật toán như SVM và Random Forest được sử dụng phổ biến trong phát hiện gian lận tài chính :contentReference[oaicite:1]{index=1}.
+\section{Dữ liệu}
+
+Bộ dữ liệu được sử dụng trong đề tài là Credit Card Fraud Detection, bao gồm các giao dịch thẻ tín dụng thực tế.
+
+\begin{itemize}
+    \item Số lượng mẫu: hơn 280,000 giao dịch
+    \item Số lượng gian lận: rất nhỏ (mất cân bằng dữ liệu)
+\end{itemize}
+
+Dữ liệu đã được xử lý trước và lưu trữ trong hai dạng:
+\begin{itemize}
+    \item Dữ liệu gốc (raw data)
+    \item Dữ liệu đã xử lý (processed data)
+\end{itemize}
+
+Một đặc điểm quan trọng của dữ liệu là sự mất cân bằng (imbalanced data), điều này gây khó khăn cho việc huấn luyện mô hình.
+\section{Tiền xử lý dữ liệu}
+
+Các bước tiền xử lý bao gồm:
+
+\begin{itemize}
+    \item Làm sạch dữ liệu
+    \item Chuẩn hóa dữ liệu
+    \item Xử lý dữ liệu thiếu
+    \item Chuẩn hóa feature
+\end{itemize}
+
+Ngoài ra, do dữ liệu bị mất cân bằng, các kỹ thuật như undersampling hoặc oversampling có thể được áp dụng để cải thiện hiệu quả mô hình.
+\section{Phân tích dữ liệu}
+
+Phân tích dữ liệu giúp hiểu rõ hơn về phân bố dữ liệu và phát hiện các đặc điểm quan trọng.
+
+Các kỹ thuật sử dụng:
+\begin{itemize}
+    \item Histogram
+    \item Correlation matrix
+    \item Visualization
+\end{itemize}
+
+Kết quả cho thấy:
+\begin{itemize}
+    \item Dữ liệu gian lận chiếm tỷ lệ rất nhỏ
+    \item Một số đặc trưng có ảnh hưởng lớn đến việc phân loại
+\end{itemize}
+\section{Phân tích dữ liệu}
+
+Phân tích dữ liệu giúp hiểu rõ hơn về phân bố dữ liệu và phát hiện các đặc điểm quan trọng.
+
+Các kỹ thuật sử dụng:
+\begin{itemize}
+    \item Histogram
+    \item Correlation matrix
+    \item Visualization
+\end{itemize}
+
+Kết quả cho thấy:
+\begin{itemize}
+    \item Dữ liệu gian lận chiếm tỷ lệ rất nhỏ
+    \item Một số đặc trưng có ảnh hưởng lớn đến việc phân loại
+\end{itemize}
+\section{Xây dựng mô hình}
+
+Các mô hình được sử dụng:
+
+\begin{itemize}
+    \item Logistic Regression
+    \item Random Forest
+    \item Decision Tree
+\end{itemize}
+
+Quy trình:
+\begin{itemize}
+    \item Chia dữ liệu train/test
+    \item Huấn luyện mô hình
+    \item Đánh giá mô hình
+\end{itemize}
+\section{Đánh giá}
+
+Các chỉ số đánh giá:
+\begin{itemize}
+    \item Accuracy
+    \item Precision
+    \item Recall
+    \item F1-score
+\end{itemize}
+
+Ngoài ra, confusion matrix được sử dụng để đánh giá hiệu suất mô hình.
+
+Kết quả cho thấy mô hình có khả năng phát hiện gian lận với độ chính xác cao.
+\section{Kết luận}
+
+Trong đề tài này, chúng tôi đã xây dựng thành công hệ thống phát hiện gian lận thẻ tín dụng bằng các kỹ thuật khai phá dữ liệu.
+
+Kết quả cho thấy:
+\begin{itemize}
+    \item Mô hình có khả năng phát hiện gian lận hiệu quả
+    \item Có thể áp dụng trong thực tế
+\end{itemize}
+
+Hướng phát triển:
+\begin{itemize}
+    \item Cải thiện mô hình bằng Deep Learning
+    \item Xử lý dữ liệu thời gian thực
+\end{itemize}
+\section{Tài liệu tham khảo}
+
+[1] Richa Gupta, "Data Mining for Fraud Detection", 2019. :contentReference[oaicite:2]{index=2}
+
+[2] Financial Fraud Detection Review, ScienceDirect. :contentReference[oaicite:3]{index=3}
+
+[3] Anomaly Detection, Wikipedia. :contentReference[oaicite:4]{index=4}
